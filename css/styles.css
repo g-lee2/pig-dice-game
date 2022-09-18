@@ -1,0 +1,75 @@
+.hidden {
+  display: none;
+}
+
+.roll-dice {
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  color: rgb(164, 75, 75);
+  background: none;
+  border: none;
+  font-family: Lato;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 300;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.hold-dice {
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%);
+  color: rgb(164, 75, 75);
+  background: none;
+  border: none;
+  font-family: Lato;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 300;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover { font-weight: 600; }
+button:hover i { margin-right: 20px; }
+
+button:focus {
+    outline: none;
+}
+
+#container {
+  min-height: 100vh;
+  display: flex;
+}
+ 
+.player-one {
+  text-align: center;
+  font-size: 100px;
+  font-weight: 100;
+  background-color: #dfafaf;
+  width: 40%;
+  margin: auto;
+  padding: 120px;
+  float: left;
+}
+
+.player-two {
+  text-align: center;
+  font-size: 100px;
+  font-weight: 100;
+  background-color: #7fbac5;
+  width: 40%;
+  margin: auto;
+  padding: 120px;
+  float: right;
+}
+
+.score-and-roll {
+  text-align: center;
+}

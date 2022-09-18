@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/scripts.js"></script>
+  <title>Pig Dice</title>
+</head>
+<body> 
+<div id="container" class="player-one">
+  <h1>Player One</h1>
+  <h2>Score: <span class="player-one-score"></span> </h2>
+</div>
+<div id="container" class="player-two">
+  <h1>Player Two </h1>
+  <h2>Score: <span class="player-two-score"></span></h2>
+</div>
+<div class="score-and-roll">
+  <h2>Current Score: <span class="display-current-score"></span></h2>
+  <h2>Roll: <span class="display-dice-roll"></span></h2>
+</div>
+<div class="buttons-for-dice">
+  <button id="roll-dice" class="roll-dice" type="button">Roll the dice!</button>
+  <button id="hold-dice" class="hold-dice" type="button">Hold the dice!</button>
+</div>
+<div class="hidden">
+  <button id="new-game" type="button">Start a new game!</button>
+</div>
+</body>
+</html>

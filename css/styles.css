@@ -11,7 +11,6 @@
   color: rgb(164, 75, 75);
   background: none;
   border: none;
-  font-family: Lato;
   font-size: 20px;
   text-transform: uppercase;
   cursor: pointer;
@@ -28,7 +27,6 @@
   color: rgb(164, 75, 75);
   background: none;
   border: none;
-  font-family: Lato;
   font-size: 20px;
   text-transform: uppercase;
   cursor: pointer;
@@ -72,4 +70,5 @@ button:focus {
 
 .score-and-roll {
   text-align: center;
+  padding: 10%;
 }

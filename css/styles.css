@@ -72,3 +72,7 @@ button:focus {
   text-align: center;
   padding: 10%;
 }
+
+#player-name {
+  text-align: center;
+}

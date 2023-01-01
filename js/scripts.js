@@ -4,3 +4,12 @@
 // If the player rolls any other number, it is added to their turn total and the player's turn continues.
 // If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.
 // The first player to score 100 or more points wins.
+
+// Get random number between 1-6 when roll dice button is clicked
+function rollDice() {
+  min = Math.ceil(1);
+  max = Math.floor(7);
+  const randomDiceNumb = Math.floor(Math.random() * (max - min) + min);
+  console.log(randomDiceNumb);
+}
+

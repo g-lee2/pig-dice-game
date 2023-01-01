@@ -11,6 +11,10 @@
       <div class="header">
           <h1>Pig Dice</h1>
       </div>
+        <!-- Results Text -->
+      <div class="result-container">
+        <h3 class="result-text" id="resultTest">Player One Starts!</h3>
+      </div>
       <!-- Player 1 Container -->
       <div class="player-container" id="player1">
           <h2 class="player1-scoreboard">P1 - TOTAL: <span id="player1Score"></span> - </span>ROUND:<span id="player1Round"> - </span>ROLL:<span id="player1Roll"></span></h2>
@@ -24,11 +28,7 @@
           <button type="button" class="hold-btn-p2" onclick="holdDicePlayerTwo()" disabled>Hold Dice!</button>
       </div>
       <!-- Reset Icon -->
-      <i class="fas fa-sync-alt reset-icon" title="Reset"></i>
-      <!-- Results Text -->
-      <div class="result-container">
-          <h3 class="result-text" id="resultTest" hidden>Result</h3>
-      </div>
+      <i class="fas fa-sync-alt reset-icon" title="Reset" onclick="resetGame()"></i>
     </div>
     <!-- Script -->
     <script src="scripts.js"></script>

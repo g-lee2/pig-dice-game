@@ -18,7 +18,7 @@ body {
 
 .game-container {
   width: 530px;
-  height: 780px;
+  height: 820px;
   background: white;
   border-radius: 10px;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
@@ -82,12 +82,15 @@ button:active {
 
 .player-container {
   margin: 77px;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .result-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 50px;
 }
 
 .reset-icon {

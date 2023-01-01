@@ -3,7 +3,7 @@
 // If the player rolls a 1, they score nothing and it becomes the next player's turn.
 // If the player rolls any other number, it is added to their turn total and the player's turn continues.
 // If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.
-// The first player to score 100 or more points wins.
+// The first player to score 100 or more points wins
 
 const rollPlayer1 = document.querySelector('#player1Roll');
 const rollPlayer2 = document.querySelector('#player2Roll');
@@ -19,6 +19,8 @@ const player2ScoreTotal = document.getElementById('player2Score');
 
 const player1RoundScore = document.getElementById('player1Round');
 const player2RoundScore = document.getElementById('player2Round');
+
+const result = document.getElementById('resultTest');
 
 
 // Scores
@@ -41,7 +43,7 @@ function rollDicePlayerOne() {
     holdBtnPlayer2.removeAttribute("disabled");
     playerOneRoundScore = 0;
     player1RoundScore.textContent = playerOneRoundScore + ' -';
-    
+    result.textContent = "Player two's turn!"
   } else {
     playerOneRoundScore += randomDiceNumb;
     rollPlayer1.textContent = randomDiceNumb;
@@ -56,11 +58,19 @@ function holdDicePlayerOne() {
   playerOneRoundScore = 0;
   player1RoundScore.textContent = playerOneRoundScore + ' -';
   rollPlayer1.textContent = `0 `;
-  rollBtnPlayer1.setAttribute("disabled", "");
-  holdBtnPlayer1.setAttribute("disabled", "");
-  rollBtnPlayer2.removeAttribute("disabled");
-  holdBtnPlayer2.removeAttribute("disabled");
-
+if (playerOneTotalScore >= 100) {
+    result.textContent = "Player two is the winner! Press the reset button to play again!";
+    rollBtnPlayer1.setAttribute("disabled", "");
+    holdBtnPlayer1.setAttribute("disabled", "");
+    rollBtnPlayer2.setAttribute("disabled", "");
+    holdBtnPlayer2.setAttribute("disabled", "");
+  } else {
+    result.textContent = "Player two's turn!"
+    rollBtnPlayer1.setAttribute("disabled", "");
+    holdBtnPlayer1.setAttribute("disabled", "");
+    rollBtnPlayer2.removeAttribute("disabled");
+    holdBtnPlayer2.removeAttribute("disabled");
+  }
 }
 
 // Get random number between 1-6 when roll dice button is clicked (player two)
@@ -78,6 +88,7 @@ function rollDicePlayerTwo() {
     holdBtnPlayer1.removeAttribute("disabled");
     playerTwoRoundScore = 0;
     player2RoundScore.textContent = playerTwoRoundScore + ' -';
+    result.textContent = "Player one's turn!"
   } else {
     playerTwoRoundScore += randomDiceNumb;
     rollPlayer2.textContent = randomDiceNumb;
@@ -92,9 +103,35 @@ function holdDicePlayerTwo() {
   playerTwoRoundScore = 0;
   player2RoundScore.textContent = playerTwoRoundScore + ' -';
   rollPlayer2.textContent = `0 `;
+  if (playerTwoTotalScore >= 100) {
+    result.textContent = "Player two is the winner! Press the reset button to play again!";
+    rollBtnPlayer1.setAttribute("disabled", "");
+    holdBtnPlayer1.setAttribute("disabled", "");
+    rollBtnPlayer2.setAttribute("disabled", "");
+    holdBtnPlayer2.setAttribute("disabled", "");
+  } else {
+    result.textContent = "Player one's turn!"
+    rollBtnPlayer2.setAttribute("disabled", "");
+    holdBtnPlayer2.setAttribute("disabled", "");
+    rollBtnPlayer1.removeAttribute("disabled");
+    holdBtnPlayer1.removeAttribute("disabled");
+  }
+}
+
+// Reset game function
+function resetGame() {
+  stopConfetti();
+  removeConfetti();
+  playerOneTotalScore = 0;
+  playerTwoTotalScore = 0;
+  playerOneRoundScore = 0;
+  playerTwoRoundScore = 0;
+  player1ScoreTotal.textContent = playerOneTotalScore;
+  player2ScoreTotal.textContent = playerTwoTotalScore;
+  rollPlayer1.textContent = `0 `;
+  rollPlayer2.textContent =`0 `;
   rollBtnPlayer2.setAttribute("disabled", "");
   holdBtnPlayer2.setAttribute("disabled", "");
   rollBtnPlayer1.removeAttribute("disabled");
   holdBtnPlayer1.removeAttribute("disabled");
 }
-

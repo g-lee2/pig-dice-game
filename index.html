@@ -2,8 +2,7 @@
 <html lang="en-US">
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <script src="js/scripts.js"></script>
+  <link href="styles.css" rel="stylesheet" type="text/css">
   <title>Pig Dice</title>
 </head>
   <body> 
@@ -14,14 +13,14 @@
       </div>
       <!-- Player 1 Container -->
       <div class="player-container" id="player1">
-          <h2 class="player1-scoreboard">PLAYER  1 - <span id="player1Score">TOTAL - </span><span id="player1Roll"> 6</span></h2>
-          <button type="button" class="roll-btn-p1" onclick="rollDice()">Roll Dice!</button>
+          <h2 class="player1-scoreboard">PLAYER  1 - <span id="player1Score">TOTAL - </span><span id="player1Roll"></span></h2>
+          <button type="button" class="roll-btn-p1" id="roll-p1" onclick="rollDicePlayerOne()">Roll Dice!</button>
           <button type="button" class="hold-btn-p1">Hold Dice!</button>
       </div>
       <!-- Player 2 Container -->
       <div class="player-container" id="player2">
-          <h2 class="player2-scoreboard">PLAYER 2 - <span id="player2Score">TOTAL - </span><span id="player2Roll"> 6</span></h2>
-          <button type="button" class="roll-btn-p2" onclick="rollDice()" disabled>Roll Dice!</button>
+          <h2 class="player2-scoreboard">PLAYER 2 - <span id="player2Score">TOTAL - </span><span id="player2Roll">ROLL</span></h2>
+          <button type="button" class="roll-btn-p2" id="roll-p2" onclick="rollDicePlayerTwo()" disabled>Roll Dice!</button>
           <button type="button" class="hold-btn-p2">Hold Dice!</button>
       </div>
       <!-- Reset Icon -->
@@ -31,6 +30,8 @@
           <h3 class="result-text" id="resultTest">Result</h3>
       </div>
     </div>
+    <!-- Script -->
+    <script src="scripts.js"></script>
   </body>
 </html>
 

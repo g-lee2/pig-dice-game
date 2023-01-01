@@ -28,7 +28,10 @@ function rollDicePlayerOne() {
     console.log('its a one!');
     rollBtnPlayer1.setAttribute("disabled", "");
     rollBtnPlayer2.removeAttribute("disabled");
+    rollPlayer1.textContent = 'ROLL';
     console.log('switched!');
+  } else {
+    rollPlayer1.textContent = randomDiceNumb;
   }
 }
 
@@ -42,6 +45,9 @@ function rollDicePlayerTwo() {
     console.log('its a one!');
     rollBtnPlayer2.setAttribute("disabled", "");
     rollBtnPlayer1.removeAttribute("disabled");
+    rollPlayer2.textContent = 'ROLL';
     console.log('switched!');
+  } else {
+    rollPlayer2.textContent = randomDiceNumb;
   }
 }

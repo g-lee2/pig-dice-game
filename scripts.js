@@ -22,6 +22,8 @@ const player2RoundScore = document.getElementById('player2Round');
 
 const result = document.getElementById('resultTest');
 
+const resetBtn = document.querySelector('i');
+
 
 // Scores
 let playerOneTotalScore = 0;
@@ -120,14 +122,13 @@ function holdDicePlayerTwo() {
 
 // Reset game function
 function resetGame() {
-  stopConfetti();
-  removeConfetti();
   playerOneTotalScore = 0;
   playerTwoTotalScore = 0;
   playerOneRoundScore = 0;
   playerTwoRoundScore = 0;
   player1ScoreTotal.textContent = playerOneTotalScore;
   player2ScoreTotal.textContent = playerTwoTotalScore;
+  result.textContent = "Player one starts!"
   rollPlayer1.textContent = `0 `;
   rollPlayer2.textContent =`0 `;
   rollBtnPlayer2.setAttribute("disabled", "");
@@ -135,3 +136,5 @@ function resetGame() {
   rollBtnPlayer1.removeAttribute("disabled");
   holdBtnPlayer1.removeAttribute("disabled");
 }
+
+resetBtn.addEventListener('click', resetGame);

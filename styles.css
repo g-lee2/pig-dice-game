@@ -18,21 +18,21 @@ body {
 
 .game-container {
   width: 530px;
-  height: 820px;
+  height: 760px;
   background: white;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
 }
 
 .header {
-  background: #ff89e7;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  background: #fb6ddf;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   height: 110px;
   display: flex;
   justify-content: center;
   align-items: center;
-  letter-spacing: 6px;
+  letter-spacing: 10px;
   font-family: 'Seymour One', sans-serif;
 }
 
@@ -51,13 +51,18 @@ button {
 }
 
 button:hover {
-  filter: brightness(105%);
+  filter: brightness(108%);
 }
 
 button:active {
   filter: brightness(105%);
   box-shadow: 0 5px rgb(220, 220, 220);
   transform: translateY(4px);
+}
+
+button[disabled] {
+  opacity: 40%;
+  cursor: not-allowed;
 }
 
 .roll-btn-p1,
@@ -81,9 +86,11 @@ button:active {
 }
 
 .player-container {
-  margin: 77px;
+  margin: 16%;
   margin-top: 30px;
   margin-bottom: 50px;
+  padding-left: 3%;
+  text-align: center;
 }
 
 .result-container {
@@ -99,10 +106,23 @@ button:active {
   margin-left: 50px;
 }
 
+.reset-icon:hover {
+  color: rgb(134, 134, 134);
+}
+
+.instruction-icon {
+  font-size: 30px;
+  cursor: pointer;
+  margin-left: 360px;
+}
+
+.instruction-icon:hover {
+  color: rgb(134, 134, 134);
+}
+
 .result-text {
   font-size: 35px;
   margin: unset;
-  margin-top: 20px;
 }
 
 h1 {

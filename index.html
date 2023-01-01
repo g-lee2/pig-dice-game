@@ -17,18 +17,19 @@
       </div>
       <!-- Player 1 Container -->
       <div class="player-container" id="player1">
-          <h2 class="player1-scoreboard">P1 - TOTAL: <span id="player1Score"></span> - </span>ROUND:<span id="player1Round"> - </span>ROLL:<span id="player1Roll"></span></h2>
+          <h2 class="player1-scoreboard">P1 - TOTAL: <span id="player1Score"></span> - </span>ROUND: <span id="player1Round">0</span>- ROLL: <span id="player1Roll">0</span></h2>
           <button type="button" class="roll-btn-p1" id="roll-p1" onclick="rollDicePlayerOne()">Roll Dice!</button>
           <button type="button" class="hold-btn-p1" onclick="holdDicePlayerOne()">Hold Dice!</button>
       </div>
       <!-- Player 2 Container -->
       <div class="player-container" id="player2">
-        <h2 class="player2-scoreboard">P2 - TOTAL: <span id="player2Score"></span> - </span>ROUND:<span id="player2Round"> - </span>ROLL:<span id="player2Roll"></span></h2>
+        <h2 class="player2-scoreboard">P2 - TOTAL: <span id="player2Score"></span> - </span>ROUND: <span id="player2Round">0</span>- ROLL: <span id="player2Roll"0></span></h2>
           <button type="button" class="roll-btn-p2" id="roll-p2" onclick="rollDicePlayerTwo()" disabled>Roll Dice!</button>
           <button type="button" class="hold-btn-p2" onclick="holdDicePlayerTwo()" disabled>Hold Dice!</button>
       </div>
       <!-- Reset Icon -->
       <i class="fas fa-sync-alt reset-icon" title="Reset"></i>
+      <i class="fa fa-question-circle instruction-icon" title="Game Rules"aria-hidden="true"></i>
     </div>
     <!-- Script -->
     <script src="scripts.js"></script>

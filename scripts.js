@@ -38,29 +38,29 @@ function rollDicePlayerOne() {
   const randomDiceNumb = Math.floor(Math.random() * (max - min) + min);
   // Checks to see if number rolled was one or not
   if (randomDiceNumb === 1) {
-    rollPlayer1.textContent = randomDiceNumb;
+    rollPlayer1.textContent = " " + randomDiceNumb;
     rollBtnPlayer1.setAttribute("disabled", "");
     holdBtnPlayer1.setAttribute("disabled", "");
     rollBtnPlayer2.removeAttribute("disabled");
     holdBtnPlayer2.removeAttribute("disabled");
     playerOneRoundScore = 0;
-    player1RoundScore.textContent = playerOneRoundScore + ' -';
+    player1RoundScore.textContent = " " + playerOneRoundScore;
     result.textContent = "Player two's turn!"
   } else {
     playerOneRoundScore += randomDiceNumb;
-    rollPlayer1.textContent = randomDiceNumb;
-    player1RoundScore.textContent = playerOneRoundScore + ' -'; 
+    rollPlayer1.textContent = " " + randomDiceNumb;
+    player1RoundScore.textContent = " " + playerOneRoundScore; 
   } 
 }
 
 // When the player 1 presses hold dice button
 function holdDicePlayerOne() {
   playerOneTotalScore += playerOneRoundScore;
-  player1ScoreTotal.textContent = playerOneTotalScore;
+  player1ScoreTotal.textContent = " " + playerOneTotalScore;
   playerOneRoundScore = 0;
-  player1RoundScore.textContent = playerOneRoundScore + ' -';
+  player1RoundScore.textContent = " " + playerOneRoundScore;
   rollPlayer1.textContent = `0 `;
-if (playerOneTotalScore >= 100) {
+  if (playerOneTotalScore >= 100) {
     result.textContent = "Player two is the winner! Press the reset button to play again!";
     rollBtnPlayer1.setAttribute("disabled", "");
     holdBtnPlayer1.setAttribute("disabled", "");
@@ -83,27 +83,27 @@ function rollDicePlayerTwo() {
   console.log(randomDiceNumb);
   // Checks to see if number rolled was one or not
   if (randomDiceNumb === 1) {
-    rollPlayer2.textContent = randomDiceNumb;
+    rollPlayer2.textContent = " " + randomDiceNumb;
     rollBtnPlayer2.setAttribute("disabled", "");
     holdBtnPlayer2.setAttribute("disabled", "");
     rollBtnPlayer1.removeAttribute("disabled");
     holdBtnPlayer1.removeAttribute("disabled");
     playerTwoRoundScore = 0;
-    player2RoundScore.textContent = playerTwoRoundScore + ' -';
+    player2RoundScore.textContent = " " + playerTwoRoundScore;
     result.textContent = "Player one's turn!"
   } else {
     playerTwoRoundScore += randomDiceNumb;
-    rollPlayer2.textContent = randomDiceNumb;
-    player2RoundScore.textContent = playerTwoRoundScore + ' -';
+    rollPlayer2.textContent = " " + randomDiceNumb;
+    player2RoundScore.textContent = " " + playerTwoRoundScore;
   } 
 }
 
 // When the player 2 presses hold dice button
 function holdDicePlayerTwo() {
   playerTwoTotalScore += playerTwoRoundScore;
-  player2ScoreTotal.textContent = playerTwoTotalScore;
+  player2ScoreTotal.textContent = " " + playerTwoTotalScore;
   playerTwoRoundScore = 0;
-  player2RoundScore.textContent = playerTwoRoundScore + ' -';
+  player2RoundScore.textContent = " " + playerTwoRoundScore;
   rollPlayer2.textContent = `0 `;
   if (playerTwoTotalScore >= 100) {
     result.textContent = "Player two is the winner! Press the reset button to play again!";
@@ -126,8 +126,10 @@ function resetGame() {
   playerTwoTotalScore = 0;
   playerOneRoundScore = 0;
   playerTwoRoundScore = 0;
-  player1ScoreTotal.textContent = playerOneTotalScore;
-  player2ScoreTotal.textContent = playerTwoTotalScore;
+  player1RoundScore.textContent = " " + playerOneRoundScore;
+  player2RoundScore.textContent = " " + playerTwoRoundScore;
+  player1ScoreTotal.textContent = " " + playerOneTotalScore;
+  player2ScoreTotal.textContent = " " + playerTwoTotalScore;
   result.textContent = "Player one starts!"
   rollPlayer1.textContent = `0 `;
   rollPlayer2.textContent =`0 `;
@@ -137,4 +139,9 @@ function resetGame() {
   holdBtnPlayer1.removeAttribute("disabled");
 }
 
+// Event Listeners
+// rollBtnPlayer1.addEventListener('click', rollDicePlayerOne);
+// rollBtnPlayer2.addEventListener('click', rollDicePlayerTwo);
+// holdBtnPlayer1.addEventListener('click', holdDicePlayerOne);
+// holdBtnPlayer2.addEventListener('click', holdDicePlayerTwo);
 resetBtn.addEventListener('click', resetGame);

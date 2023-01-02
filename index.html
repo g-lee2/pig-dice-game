@@ -9,23 +9,27 @@
     <div class="game-container">
       <!-- Header -->
       <div class="header">
-          <h1>Pig Dice</h1>
+          <h1>PIG DICE</h1>
       </div>
         <!-- Results Text -->
       <div class="result-container">
-        <h3 class="result-text" id="resultTest">Player One Starts!</h3>
+        <h3 class="result-text" id="resultTest">PLAYER ONE STARTS!</h3>
       </div>
       <!-- Player 1 Container -->
       <div class="player-container" id="player1">
-          <h2 class="player1-scoreboard">P1 - TOTAL: <span id="player1Score"></span> - </span>ROUND: <span id="player1Round">0</span>- ROLL: <span id="player1Roll">0</span></h2>
-          <button type="button" class="roll-btn-p1" id="roll-p1" onclick="rollDicePlayerOne()">Roll Dice!</button>
-          <button type="button" class="hold-btn-p1" onclick="holdDicePlayerOne()">Hold Dice!</button>
+          <h2 class="player1-scoreboard">PLAYER 1</h2> 
+          <h2 class="player1-scoreboard">TOTAL:<span id="player1Score">0</span></h2>
+          <h2 class="player1-scoreboard">ROUND:<span id="player1Round">0</span> | ROLL:<span id="player1Roll">0</span></h2>
+          <button type="button" class="roll-btn-p1" id="roll-p1" onclick="rollDicePlayerOne()">ROLL DICE!</button>
+          <button type="button" class="hold-btn-p1" onclick="holdDicePlayerOne()">HOLD DICE!</button>
       </div>
       <!-- Player 2 Container -->
       <div class="player-container" id="player2">
-        <h2 class="player2-scoreboard">P2 - TOTAL: <span id="player2Score"></span> - </span>ROUND: <span id="player2Round">0</span>- ROLL: <span id="player2Roll"0></span></h2>
-          <button type="button" class="roll-btn-p2" id="roll-p2" onclick="rollDicePlayerTwo()" disabled>Roll Dice!</button>
-          <button type="button" class="hold-btn-p2" onclick="holdDicePlayerTwo()" disabled>Hold Dice!</button>
+        <h2 class="player2-scoreboard">PLAYER 2</h2>
+        <h2 class="player2-scoreboard">TOTAL: <span id="player2Score">0</span></h2>
+        <h2 class="player2-scoreboard">ROUND:<span id="player2Round">0</span> | ROLL:<span id="player2Roll">0</span></h2>
+          <button type="button" class="roll-btn-p2" id="roll-p2" onclick="rollDicePlayerTwo()" disabled>ROLL DICE!</button>
+          <button type="button" class="hold-btn-p2" onclick="holdDicePlayerTwo()" disabled>HOLD DICE!</button>
       </div>
       <!-- Reset Icon -->
       <i class="fas fa-sync-alt reset-icon" title="Reset"></i>
@@ -35,4 +39,3 @@
     <script src="scripts.js"></script>
   </body>
 </html>
-

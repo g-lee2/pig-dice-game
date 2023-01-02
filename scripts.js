@@ -45,7 +45,7 @@ function rollDicePlayerOne() {
     holdBtnPlayer2.removeAttribute("disabled");
     playerOneRoundScore = 0;
     player1RoundScore.textContent = " " + playerOneRoundScore;
-    result.textContent = "Player two's turn!"
+    result.textContent = "PLAYER TWO'S TURN!"
   } else {
     playerOneRoundScore += randomDiceNumb;
     rollPlayer1.textContent = " " + randomDiceNumb;
@@ -61,13 +61,13 @@ function holdDicePlayerOne() {
   player1RoundScore.textContent = " " + playerOneRoundScore;
   rollPlayer1.textContent = `0 `;
   if (playerOneTotalScore >= 100) {
-    result.textContent = "Player two is the winner! Press the reset button to play again!";
+    result.textContent = "PLAYER TWO WON! PRESS THE RESET BUTTON TO PLAY AGAIN!";
     rollBtnPlayer1.setAttribute("disabled", "");
     holdBtnPlayer1.setAttribute("disabled", "");
     rollBtnPlayer2.setAttribute("disabled", "");
     holdBtnPlayer2.setAttribute("disabled", "");
   } else {
-    result.textContent = "Player two's turn!"
+    result.textContent = "PLAYER TWO'S TURN!"
     rollBtnPlayer1.setAttribute("disabled", "");
     holdBtnPlayer1.setAttribute("disabled", "");
     rollBtnPlayer2.removeAttribute("disabled");
@@ -90,7 +90,7 @@ function rollDicePlayerTwo() {
     holdBtnPlayer1.removeAttribute("disabled");
     playerTwoRoundScore = 0;
     player2RoundScore.textContent = " " + playerTwoRoundScore;
-    result.textContent = "Player one's turn!"
+    result.textContent = "PLAYER ONE'S TURN!"
   } else {
     playerTwoRoundScore += randomDiceNumb;
     rollPlayer2.textContent = " " + randomDiceNumb;
@@ -106,13 +106,13 @@ function holdDicePlayerTwo() {
   player2RoundScore.textContent = " " + playerTwoRoundScore;
   rollPlayer2.textContent = `0 `;
   if (playerTwoTotalScore >= 100) {
-    result.textContent = "Player two is the winner! Press the reset button to play again!";
+    result.textContent = "PLAYER ONE WON! PRESS THE RESET BUTTON TO PLAY AGAIN!";
     rollBtnPlayer1.setAttribute("disabled", "");
     holdBtnPlayer1.setAttribute("disabled", "");
     rollBtnPlayer2.setAttribute("disabled", "");
     holdBtnPlayer2.setAttribute("disabled", "");
   } else {
-    result.textContent = "Player one's turn!"
+    result.textContent = "PLAYER ONE'S TURN!"
     rollBtnPlayer2.setAttribute("disabled", "");
     holdBtnPlayer2.setAttribute("disabled", "");
     rollBtnPlayer1.removeAttribute("disabled");
@@ -130,7 +130,7 @@ function resetGame() {
   player2RoundScore.textContent = " " + playerTwoRoundScore;
   player1ScoreTotal.textContent = " " + playerOneTotalScore;
   player2ScoreTotal.textContent = " " + playerTwoTotalScore;
-  result.textContent = "Player one starts!"
+  result.textContent = "PLAYER ONE STARTS!"
   rollPlayer1.textContent = `0 `;
   rollPlayer2.textContent =`0 `;
   rollBtnPlayer2.setAttribute("disabled", "");

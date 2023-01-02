@@ -17,28 +17,28 @@ body {
 }
 
 .game-container {
-  width: 530px;
-  height: 760px;
+  width: 580px;
+  height: 830px;
   background: white;
   border-radius: 15px;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
 }
 
 .header {
-  background: #fb6ddf;
+  background: #F78888;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  height: 110px;
+  height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
-  letter-spacing: 10px;
+  letter-spacing: 20px;
   font-family: 'Seymour One', sans-serif;
 }
 
 button {
   padding: 10px 20px;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
   font-family: 'Seymour One', sans-serif;
   text-align: center;
@@ -48,6 +48,7 @@ button {
   border: none;
   border-radius: 15px;
   box-shadow: 0 7px rgb(220, 220, 220);
+  display: inline-block;
 }
 
 button:hover {
@@ -67,30 +68,32 @@ button[disabled] {
 
 .roll-btn-p1,
 .hold-btn-p1 {
-  background-color: rgb(127, 163, 255);
+  background-color: #5DA2D5;
 }
 
 .roll-btn-p2,
 .hold-btn-p2 {
-  background-color: rgb(163, 127, 255);
+  background-color: #F4976C;
 }
 
 .player1-scoreboard {
-  color: rgb(127, 163, 255);
+  color: #5DA2D5;
   font-size: 35px;
+  margin: 10px;
 }
 
 .player2-scoreboard {
-  color: rgb(163, 127, 255);
+  color: #F4976C;
   font-size: 35px;
+  margin: 10px;
 }
 
 .player-container {
   margin: 16%;
   margin-top: 30px;
   margin-bottom: 50px;
-  padding-left: 3%;
   text-align: center;
+  white-space: nowrap;
 }
 
 .result-container {
@@ -113,7 +116,7 @@ button[disabled] {
 .instruction-icon {
   font-size: 30px;
   cursor: pointer;
-  margin-left: 360px;
+  margin-left: 415px;
 }
 
 .instruction-icon:hover {
@@ -121,8 +124,9 @@ button[disabled] {
 }
 
 .result-text {
-  font-size: 35px;
+  font-size: 40px;
   margin: unset;
+  color: #F78888;
 }
 
 h1 {

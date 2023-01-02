@@ -1,12 +1,7 @@
-// Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":
-
-// If the player rolls a 1, they score nothing and it becomes the next player's turn.
-// If the player rolls any other number, it is added to their turn total and the player's turn continues.
-// If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.
-// The first player to score 100 or more points wins
-
 const rollPlayer1 = document.querySelector('#player1Roll');
 const rollPlayer2 = document.querySelector('#player2Roll');
+
+const gameRules = document.getElementById('game-rules');
 
 const holdBtnPlayer1 = document.querySelector('.hold-btn-p1');
 const holdBtnPlayer2 = document.querySelector('.hold-btn-p2');
@@ -126,17 +121,25 @@ function resetGame() {
   playerTwoTotalScore = 0;
   playerOneRoundScore = 0;
   playerTwoRoundScore = 0;
-  player1RoundScore.textContent = " " + playerOneRoundScore;
-  player2RoundScore.textContent = " " + playerTwoRoundScore;
-  player1ScoreTotal.textContent = " " + playerOneTotalScore;
-  player2ScoreTotal.textContent = " " + playerTwoTotalScore;
+  player1RoundScore.textContent = playerOneRoundScore;
+  player2RoundScore.textContent = playerTwoRoundScore;
+  player1ScoreTotal.textContent = playerOneTotalScore;
+  player2ScoreTotal.textContent = playerTwoTotalScore;
   result.textContent = "PLAYER ONE STARTS!"
-  rollPlayer1.textContent = `0 `;
-  rollPlayer2.textContent =`0 `;
+  rollPlayer1.textContent = `0`;
+  rollPlayer2.textContent =`0`;
   rollBtnPlayer2.setAttribute("disabled", "");
   holdBtnPlayer2.setAttribute("disabled", "");
   rollBtnPlayer1.removeAttribute("disabled");
   holdBtnPlayer1.removeAttribute("disabled");
+}
+
+function showGameRules() {
+  if (gameRules.classList.contains('hidden')) {
+    gameRules.classList.remove('hidden');
+  } else if (!gameRules.classList.contains('hidden') || window.onclick) {
+    gameRules.classList.add('hidden');
+  }
 }
 
 // Event Listeners

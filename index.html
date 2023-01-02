@@ -33,7 +33,16 @@
       </div>
       <!-- Reset Icon -->
       <i class="fas fa-sync-alt reset-icon" title="Reset"></i>
-      <i class="fa fa-question-circle instruction-icon" title="Game Rules"aria-hidden="true"></i>
+      <i class="fa fa-question-circle instruction-icon" title="Game Rules" onclick="showGameRules()"></i>
+    </div>
+    <!-- Instructions -->
+    <div class="instruction-container hidden" id="game-rules">
+      <h1 class="instruction-title">GAME RULES</h1>
+      <h3 class="instruction-list">Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold".</h3>
+      <h3 class="instruction-list">If the player rolls a 1, they score nothing and it becomes the next player's turn.</h3>
+      <h3 class="instruction-list">If the player rolls any other number, it is added to their turn total and the player's turn continues.</h3>
+      <h3 class="instruction-list">If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</h3>
+      <h3 class="instruction-list">The first player to score 100 or more points wins.</h3>
     </div>
     <!-- Script -->
     <script src="scripts.js"></script>

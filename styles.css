@@ -133,3 +133,31 @@ h1 {
   color: white;
   font-size: 40px;
 }
+
+.instruction-container {
+  background: rgb(255, 255, 255);
+  position: absolute;
+  border-radius: 15px;
+  z-index: 100;
+  box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.4);
+}
+
+.instruction-title {
+  text-align: center;
+  background-color: #f788a4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 20px;
+  font-family: 'Seymour One', sans-serif;
+}
+
+.instruction-title,
+.instruction-list {
+  text-align: center;
+  padding: 2%;
+}
+
+.hidden {
+  display: none;
+}

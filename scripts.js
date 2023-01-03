@@ -135,14 +135,11 @@ function resetGame() {
 function showGameRules() {
   if (gameRules.classList.contains('hidden')) {
     gameRules.classList.remove('hidden');
-  } else if (!gameRules.classList.contains('hidden') || window.onclick) {
+  } else if (!gameRules.classList.contains('hidden')) {
     gameRules.classList.add('hidden');
   }
 }
 
 // Event Listeners
-// rollBtnPlayer1.addEventListener('click', rollDicePlayerOne);
-// rollBtnPlayer2.addEventListener('click', rollDicePlayerTwo);
-// holdBtnPlayer1.addEventListener('click', holdDicePlayerOne);
-// holdBtnPlayer2.addEventListener('click', holdDicePlayerTwo);
 resetBtn.addEventListener('click', resetGame);
+

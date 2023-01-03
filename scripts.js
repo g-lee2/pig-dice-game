@@ -19,7 +19,6 @@ const result = document.getElementById('resultTest');
 
 const resetBtn = document.querySelector('i');
 
-
 // Scores
 let playerOneTotalScore = 0;
 let playerTwoTotalScore = 0;
@@ -56,7 +55,7 @@ function holdDicePlayerOne() {
   player1RoundScore.textContent = " " + playerOneRoundScore;
   rollPlayer1.textContent = `0 `;
   if (playerOneTotalScore >= 100) {
-    result.textContent = "PLAYER TWO WON! PRESS THE RESET BUTTON TO PLAY AGAIN!";
+    result.textContent = "PLAYER ONE WON! PRESS THE RESET BUTTON TO PLAY AGAIN!";
     rollBtnPlayer1.setAttribute("disabled", "");
     holdBtnPlayer1.setAttribute("disabled", "");
     rollBtnPlayer2.setAttribute("disabled", "");
@@ -75,7 +74,6 @@ function rollDicePlayerTwo() {
   min = Math.ceil(1);
   max = Math.floor(7);
   const randomDiceNumb = Math.floor(Math.random() * (max - min) + min);
-  console.log(randomDiceNumb);
   // Checks to see if number rolled was one or not
   if (randomDiceNumb === 1) {
     rollPlayer2.textContent = " " + randomDiceNumb;
@@ -101,7 +99,7 @@ function holdDicePlayerTwo() {
   player2RoundScore.textContent = " " + playerTwoRoundScore;
   rollPlayer2.textContent = `0 `;
   if (playerTwoTotalScore >= 100) {
-    result.textContent = "PLAYER ONE WON! PRESS THE RESET BUTTON TO PLAY AGAIN!";
+    result.textContent = "PLAYER TWO WON! PRESS THE RESET BUTTON TO PLAY AGAIN!";
     rollBtnPlayer1.setAttribute("disabled", "");
     holdBtnPlayer1.setAttribute("disabled", "");
     rollBtnPlayer2.setAttribute("disabled", "");

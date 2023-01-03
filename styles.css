@@ -17,8 +17,9 @@ body {
 }
 
 .game-container {
+  margin: 2%;
   width: 580px;
-  height: 830px;
+  height: 850px;
   background: white;
   border-radius: 15px;
   box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.4);
@@ -124,9 +125,10 @@ button[disabled] {
 }
 
 .result-text {
-  font-size: 40px;
+  font-size: 30px;
   margin: unset;
   color: #F78888;
+  text-align: center;
 }
 
 h1 {

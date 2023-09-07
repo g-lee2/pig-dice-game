@@ -12,7 +12,7 @@
 
 ## Description
 
-_ The game has simple rules: in each turn a player rolls a six-sided dice as many times as they wish or until they roll a 1. The dice results are summed up to form the score of the turn. But if they roll a 1, their score for that turn is zero. Players can hold their score at any point of their turn, and add the score of the turn to their total score. In this implementation of the Pig Dice game, you will experience a digital version built with HTML, CSS, and JavaScript, maintaining the simple rules and fun of the traditional game while employing a user-friendly interface._
+_The game has simple rules: in each turn a player rolls a six-sided dice as many times as they wish or until they roll a 1. The dice results are summed up to form the score of the turn. But if they roll a 1, their score for that turn is zero. Players can hold their score at any point of their turn, and add the score of the turn to their total score. In this implementation of the Pig Dice game, you will experience a digital version built with HTML, CSS, and JavaScript, maintaining the simple rules and fun of the traditional game while employing a user-friendly interface._
 
 ## Setup/Installation Requirements
 1. Clone the repository: '[https://github.com/g-lee2/pig-dice-game]' to your desktop.
